@@ -8,8 +8,9 @@ def pagina():
     return "Página inicial!"
 
 
-@app.route('/ola/<nome>')
-def ola(nome):
+@app.route('/ola/')
+@app.route('/ola/<nome>')  # utilizando parâmetro da função olá, isso vai passar o valor como argumento para função!
+def ola(nome="mundo"):
     return 'Olá, ' + nome
 
 
