@@ -18,7 +18,7 @@ def ola(nome):
 
 @app.route('/logar', methods=['GET', 'POST'])
 def logar():
-    if request.method == 'POST':
+    if request.method == 'POST':  # Caso requisitado uma rota que exista, porém método não aceito, erro 405
         return "Recebeu um post! Fazer login!"
     else:
         return "Recebeu um get! Exibir FORM de login"
