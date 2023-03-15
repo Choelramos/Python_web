@@ -3,7 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/')  # Raiz
 def index():
     return render_template('inicio.html')
 
@@ -11,8 +11,7 @@ def index():
 @app.route('/oi/')
 @app.route('/oi/<nome>')
 def ola(nome="mundo"):
-    return "Olá, ", nome_recebido = nome
+    return "Olá, " + nome
 
 
-    if __name__ == '__main__':
-        app.run()
+app.run()
